@@ -28,6 +28,8 @@ public class AutonBlueSpinnerAndPark extends OpMode {
         stateMachineFlow = 0;//used to iterate through the switch loop
     }
     public void loop(){
+        telemetry.addData("Current Step",stateMachineFlow +1);
+        telemetry.update();
         switch(stateMachineFlow) {
             case 0:
                 waitTime = .2;
@@ -56,7 +58,7 @@ public class AutonBlueSpinnerAndPark extends OpMode {
             case 1:
                 telemetry.addData("Stage", 2);
                 telemetry.update();
-                waitTime = 2.8;
+                waitTime = 3;
                 runtime.reset();
                 while (waitTime > runtime.time()) {
                     motor.rotaterPower(-.85);

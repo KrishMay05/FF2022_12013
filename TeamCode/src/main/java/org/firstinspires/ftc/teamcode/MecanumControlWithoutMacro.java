@@ -114,10 +114,10 @@ public class MecanumControlWithoutMacro extends OpMode{
 
 
         if(gamepad1.left_trigger>0.1){
-            Motor.intakeOnePower(-2);
+            Motor.intakeOnePower(-.8);
         }
         else if(gamepad1.right_trigger>0.1) {
-            Motor.intakeOnePower(2);
+            Motor.intakeOnePower(.8);
         }
         else{
             Motor.intakeOnePower(0);
@@ -145,6 +145,7 @@ public class MecanumControlWithoutMacro extends OpMode{
         //Vertical Lift Movement
         if(gamepad2.dpad_down){
             Motor.VertLift.setPower(-.9);
+            servopos = 0;
         }
         else if(gamepad2.dpad_up){
             Motor.VertLift.setPower(.9);

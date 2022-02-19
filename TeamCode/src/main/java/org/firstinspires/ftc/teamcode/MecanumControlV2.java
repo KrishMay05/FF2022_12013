@@ -155,28 +155,29 @@ public class MecanumControlV2 extends OpMode {
                     case 0:
                         break;
                     case 1:
-                        Motor.verLiftPosOp(.6, -dis / 2);
+                        Motor.verLiftPosOp(1, -dis / 2+1);
                         break;
                     case 2:
-                        Motor.verLiftPosOp(.6, -dis);
+                        Motor.verLiftPosOp(1, -dis+2);
+                        break;
                     case 3:
-                        Motor.verLiftPosOp(.6,-dis/6);
+                        Motor.verLiftPosOp(1,-dis/6);
                         break;
                 }
                 liftPos = 0;
-
+                servopos = 0;
         }
         if(gamepad2.a){
                 switch (liftPos) {
                     case 0:
-                        Motor.verLiftPosOp(.6, dis / 2);
+                        Motor.verLiftPosOp(1, dis / 2);
                         break;
                     case 1:
                         break;
                     case 2:
-                        Motor.verLiftPosOp(.6, -dis / 2);
+                        Motor.verLiftPosOp(1, -dis / 2);
                     case 3:
-                        Motor.verLiftPosOp(.6,2*dis/6);
+                        Motor.verLiftPosOp(1,2*dis/6);
                         break;
                 }
                 liftPos = 1;
@@ -185,15 +186,15 @@ public class MecanumControlV2 extends OpMode {
         if(gamepad2.b){
                 switch (liftPos) {
                     case 0:
-                        Motor.verLiftPosOp(.6, dis);
+                        Motor.verLiftPosOp(1, dis);
                         break;
                     case 1:
-                        Motor.verLiftPosOp(.6, dis / 2);
+                        Motor.verLiftPosOp(1, dis / 2);
                         break;
                     case 2:
                         break;
                     case 3:
-                        Motor.verLiftPosOp(.6,5*dis/6);
+                        Motor.verLiftPosOp(1,5*dis/6);
                         break;
 
                 }
@@ -202,13 +203,13 @@ public class MecanumControlV2 extends OpMode {
         if(gamepad2.y) {
             switch (liftPos) {
                 case 0:
-                    Motor.verLiftPosOp(.6, dis / 6);
+                    Motor.verLiftPosOp(1, dis / 6);
                     break;
                 case 1:
-                    Motor.verLiftPosOp(.6, -dis * 2 / 6);
+                    Motor.verLiftPosOp(1, -dis * 2 / 6);
                     break;
                 case 2:
-                    Motor.verLiftPosOp(.6, -dis * 5 / 6);
+                    Motor.verLiftPosOp(1, -dis * 5 / 6);
                     break;
             }
             liftPos = 3;

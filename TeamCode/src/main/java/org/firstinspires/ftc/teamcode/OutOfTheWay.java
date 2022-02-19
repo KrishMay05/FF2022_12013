@@ -33,10 +33,11 @@ public class OutOfTheWay extends OpMode{
 //                waitTime = .5;
 //                runtime.reset();
 //                while (waitTime > runtime.time());
-                robot.frontLinearDrive(.7,-36);
+                robot.frontLinearDrive(1,-80);
                 waitTime = 10;
                 runtime.reset();
                 while (waitTime > runtime.time());
+                stateMachineFlow++;
                 break;
             default:
 //                robot.frontLinearDrive(.7,25);

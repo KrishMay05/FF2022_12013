@@ -2,9 +2,8 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-@Autonomous(name="Complete Red Auton", group="AB")
-
-public class TotalRedAuton extends OpMode{
+@Autonomous(name="Complete Blue Auton", group="AB")
+public class TotalBlueAuton extends OpMode {
     MecanumDrive robot = new MecanumDrive();
     MotorControl motor = new MotorControl();
     Servos servo = new Servos();
@@ -35,7 +34,7 @@ public class TotalRedAuton extends OpMode{
                 waitTime = .4;
                 runtime.reset();
                 while (waitTime > runtime.time());
-                motor.verLiftPos(.9,80);
+                motor.verLiftPos(1,80);
                 stateMachineFlow++;
                 break;
             case 1:
@@ -62,22 +61,22 @@ public class TotalRedAuton extends OpMode{
                 }
                 motor.HorzLift.setPower(0);
                 robot.frontLinearDrive(.4,-3);
-                motor.verLiftPos(.9,-50);
+                motor.verLiftPos(1,-50);
                 stateMachineFlow++;
                 break;
             case 3:
-                robot.gStatTurn(.65,-50);
+                robot.gStatTurn(.98,58);
                 runtime.reset();
                 while (waitTime > runtime.time());
                 stateMachineFlow++;
                 break;
             case 4:
-                robot.frontLinearDrive(.5,-52);
-                robot.gStatTurn(.3,38);
-                robot.frontLinearDrive(.1,-.5);
+                robot.frontLinearDrive(.5,-60);
+//                robot.gStatTurn(.3,-10);
+//                robot.frontLinearDrive(.1,-.5);
 
 //                robot.frontLinearDrive(.1,-2);
-                motor.rotaterPower(.85);
+                motor.rotaterPower(-.85);
                 stateMachineFlow++;
                 break;
             case 5:
@@ -89,11 +88,12 @@ public class TotalRedAuton extends OpMode{
                 break;
             case 6:
                 robot.frontLinearDrive(.65,16);
-                robot.gStatTurn(.4,-60);
-                robot.frontLinearDrive(1,-10);
+                robot.gStatTurn(.4,43);
+                robot.frontLinearDrive(1,-17);
 //                robot.frontLinearDrive(1,-20);
 //                robot.sideDrive(.4,20);
 //                robot.frontLinearDrive(1,-110);
+                robot.gStatTurn(.4,45);
                 motor.verLiftPos(1,-30);
                 stateMachineFlow++;
                 break;
@@ -103,3 +103,4 @@ public class TotalRedAuton extends OpMode{
         }
     }
 }
+
